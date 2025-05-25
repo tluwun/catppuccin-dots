@@ -1,0 +1,23 @@
+[Default Applications]
+x-scheme-handler/http=userapp-Firefox-AF4162.desktop
+x-scheme-handler/https=userapp-Firefox-AF4162.desktop
+x-scheme-handler/chrome=userapp-Firefox-AF4162.desktop
+text/html=userapp-Firefox-AF4162.desktop
+application/x-extension-htm=userapp-Firefox-AF4162.desktop
+application/x-extension-html=userapp-Firefox-AF4162.desktop
+application/x-extension-shtml=userapp-Firefox-AF4162.desktop
+application/xhtml+xml=userapp-Firefox-AF4162.desktop
+application/x-extension-xhtml=userapp-Firefox-AF4162.desktop
+application/x-extension-xht=userapp-Firefox-AF4162.desktop
+
+[Added Associations]
+x-scheme-handler/http=userapp-Firefox-AF4162.desktop;userapp-Firefox-N75H62.desktop;
+x-scheme-handler/https=userapp-Firefox-AF4162.desktop;userapp-Firefox-N75H62.desktop;
+x-scheme-handler/chrome=userapp-Firefox-AF4162.desktop;userapp-Firefox-N75H62.desktop;
+text/html=userapp-Firefox-N75H62.desktop;userapp-Firefox-AF4162.desktop;
+application/x-extension-htm=userapp-Firefox-N75H62.desktop;userapp-Firefox-AF4162.desktop;
+application/x-extension-html=userapp-Firefox-N75H62.desktop;userapp-Firefox-AF4162.desktop;
+application/x-extension-shtml=userapp-Firefox-N75H62.desktop;userapp-Firefox-AF4162.desktop;
+application/xhtml+xml=userapp-Firefox-N75H62.desktop;userapp-Firefox-AF4162.desktop;
+application/x-extension-xhtml=userapp-Firefox-N75H62.desktop;userapp-Firefox-AF4162.desktop;
+application/x-extension-xht=userapp-Firefox-N75H62.desktop;userapp-Firefox-AF4162.desktop;

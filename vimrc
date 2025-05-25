@@ -11,6 +11,7 @@ call plug#begin()
 	Plug 'preservim/nerdtree'
 	Plug 'preservim/nerdcommenter'
 	Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+	Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
 let g:airline_theme = 'catppuccin_mocha'

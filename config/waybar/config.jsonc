@@ -13,6 +13,8 @@
 	"modules-center": [ "clock" ],
 
 	"modules-right": [ 
+		"tray",
+		"custom/separator",
 		"battery", 
 		"custom/separator", 
 		"pulseaudio", 
@@ -38,8 +40,8 @@
 		"tooltip": false
 	},
 	"memory": {
-		"format": "{percentage}%",
-		"tooltip-format": "{used}",
+		"format": "  {percentage}%",
+		"tooltip-format": "  {used}",
 		"interval": 1
 	},
 	"clock": {

@@ -1,18 +1,20 @@
 [org/gnome/desktop/interface]
 font-name='JetBrainsMono Nerd Font'
 icon-theme='Catppuccin-Mocha-Alt2'
-gtk-theme='Catppuccin-Dark-Macchiato'
+gtk-theme='Catppuccin-Mocha'
 font-hinting='medium'
+cursor-theme='Bibata-Modern-Classic'
+cursor-size=24
 
 [org/gtk/settings/file-chooser]
 window-position=(0, 0)
-window-size=(1124, 822)
+window-size=(875, 386)
 date-format='regular'
 location-mode='path-bar'
 show-hidden=true
 show-size-column=true
 show-type-column=true
-sidebar-width=174
+sidebar-width=182
 sort-column='name'
 sort-directories-first=false
 sort-order='ascending'
