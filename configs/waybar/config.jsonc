@@ -2,7 +2,8 @@
 	"layer": "bottom",
 	"position": "top",
 	"height": 42,
-"modules-left": [ 
+
+	"modules-left": [ 
 		"hyprland/workspaces", 
 		"custom/separator", 
 		"cpu", 
@@ -25,15 +26,12 @@
 	],
 
 	"hyprland/workspaces": {
-		"format": "{icon}",
-		"format-icons": {
-			"default": " ",
-			"active": ""
-		}
+		"format": "{id}"
 	},
 
 	"custom/separator": {
-		"format": "<b> | </b>"
+		"format": "<b> | </b>",
+		"tooltip": false
 	},
 	"cpu": {
 		"format": "  {usage}%",
@@ -41,7 +39,7 @@
 	},
 	"memory": {
 		"format": "  {percentage}%",
-		"tooltip-format": "  {used}",
+		"tooltip-format": "  {used}G",
 		"interval": 1
 	},
 	"clock": {

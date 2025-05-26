@@ -4,7 +4,7 @@ icon-theme='Catppuccin-Mocha-Alt2'
 gtk-theme='Catppuccin-Mocha'
 font-hinting='medium'
 cursor-theme='Bibata-Modern-Classic'
-cursor-size=24
+cursor-size=30
 
 [org/gtk/settings/file-chooser]
 window-position=(0, 0)
@@ -19,3 +19,7 @@ sort-column='name'
 sort-directories-first=false
 sort-order='ascending'
 type-format='category'
+
+[org/gnome/desktop/privacy]
+disable-camera=true
+usb-protection-level='always'
