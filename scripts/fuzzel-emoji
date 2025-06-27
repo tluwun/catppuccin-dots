@@ -1,0 +1,1000 @@
+#!/bin/bash
+set -euo pipefail
+
+MODE="${1:-type}"
+
+emoji="$(sed '1,/^### DATA ###$/d' "$0" | fuzzel --match-mode fzf --dmenu | cut -d ' ' -f 1 | tr -d '\n')"
+
+case "$MODE" in
+    type)
+        wtype "${emoji}" || wl-copy "${emoji}"
+        ;;
+    copy)
+        wl-copy "${emoji}"
+        ;;
+    both)
+        wtype "${emoji}" || true
+        wl-copy "${emoji}"
+        ;;
+    *)
+        echo "Usage: $0 [type|copy|both]"
+        exit 1
+        ;;
+esac
+
+exit
+### DATA ###
+😀 grinning face face smile happy joy :D grin
+😃 grinning face with big eyes face happy joy haha :D :) smile funny
+😄 grinning face with smiling eyes face happy joy funny haha laugh like :D :) smile
+😁 beaming face with smiling eyes face happy smile joy kawaii
+🫩 Face with Bags Under Eyes
+😆 grinning squinting face happy joy lol satisfied haha face glad XD laugh
+😅 grinning face with sweat face hot happy laugh sweat smile relief
+🤣 rolling on the floor laughing face rolling floor laughing lol haha rofl
+😂 face with tears of joy face cry tears weep happy happytears haha
+🙂 slightly smiling face face smile
+🙃 upside down face face flipped silly smile
+😉 winking face face happy mischievous secret ;) smile eye
+😊 smiling face with smiling eyes face smile happy flushed crush embarrassed shy joy
+😇 smiling face with halo face angel heaven halo
+🥰 smiling face with hearts face love like affection valentines infatuation crush hearts adore
+😍 smiling face with heart eyes face love like affection valentines infatuation crush heart
+🤩 star struck face smile starry eyes grinning
+😘 face blowing a kiss face love like affection valentines infatuation kiss
+😗 kissing face love like face 3 valentines infatuation kiss
+☺️ smiling face face blush massage happiness
+😚 kissing face with closed eyes face love like affection valentines infatuation kiss
+😙 kissing face with smiling eyes face affection valentines infatuation kiss
+😋 face savoring food happy joy tongue smile face silly yummy nom delicious savouring
+😛 face with tongue face prank childish playful mischievous smile tongue
+😜 winking face with tongue face prank childish playful mischievous smile wink tongue
+🤪 zany face face goofy crazy
+😝 squinting face with tongue face prank playful mischievous smile tongue
+🤑 money mouth face face rich dollar money
+🤗 hugging face face smile hug
+🤭 face with hand over mouth face whoops shock surprise
+🤫 shushing face face quiet shhh
+🤔 thinking face face hmmm think consider
+🤐 zipper mouth face face sealed zipper secret
+🤨 face with raised eyebrow face distrust scepticism disapproval disbelief surprise
+😐 neutral face indifference meh :| neutral
+😑 expressionless face face indifferent - - meh deadpan
+😶 face without mouth face hellokitty
+😏 smirking face face smile mean prank smug sarcasm
+😒 unamused face indifference bored straight face serious sarcasm unimpressed skeptical dubious side eye
+🙄 face with rolling eyes face eyeroll frustrated
+😬 grimacing face face grimace teeth
+🤥 lying face face lie pinocchio
+😌 relieved face face relaxed phew massage happiness
+😔 pensive face face sad depressed upset
+😪 sleepy face face tired rest nap
+🤤 drooling face face
+😴 sleeping face face tired sleepy night zzz
+😷 face with medical mask face sick ill disease
+🤒 face with thermometer sick temperature thermometer cold fever
+🤕 face with head bandage injured clumsy bandage hurt
+🤢 nauseated face face vomit gross green sick throw up ill
+🤮 face vomiting face sick
+🤧 sneezing face face gesundheit sneeze sick allergy
+🥵 hot face face feverish heat red sweating
+🥶 cold face face blue freezing frozen frostbite icicles
+🥴 woozy face face dizzy intoxicated tipsy wavy
+😵 dizzy face spent unconscious xox dizzy
+🤯 exploding head face shocked mind blown
+🤠 cowboy hat face face cowgirl hat
+🥳 partying face face celebration woohoo
+😎 smiling face with sunglasses face cool smile summer beach sunglass
+🤓 nerd face face nerdy geek dork
+🧐 face with monocle face stuffy wealthy
+😕 confused face face indifference huh weird hmmm :/
+😟 worried face face concern nervous :(
+🙁 slightly frowning face face frowning disappointed sad upset
+☹️ frowning face face sad upset frown
+😮 face with open mouth face surprise impressed wow whoa :O
+😯 hushed face face woo shh
+😲 astonished face face xox surprised poisoned
+😳 flushed face face blush shy flattered sex
+🥺 pleading face face begging mercy
+😦 frowning face with open mouth face aw what
+😧 anguished face face stunned nervous
+😨 fearful face face scared terrified nervous oops huh
+😰 anxious face with sweat face nervous sweat
+😥 sad but relieved face face phew sweat nervous
+😢 crying face face tears sad depressed upset :'(
+😭 loudly crying face face cry tears sad upset depressed sob
+😱 face screaming in fear face munch scared omg
+😖 confounded face face confused sick unwell oops :S
+😣 persevering face face sick no upset oops
+😞 disappointed face face sad upset depressed :(
+😓 downcast face with sweat face hot sad tired exercise
+😩 weary face face tired sleepy sad frustrated upset
+😫 tired face sick whine upset frustrated
+🥱 yawning face tired sleepy
+😤 face with steam from nose face gas phew proud pride
+😡 pouting face angry mad hate despise
+😠 angry face mad face annoyed frustrated
+🤬 face with symbols on mouth face swearing cursing cussing profanity expletive
+😈 smiling face with horns devil horns
+👿 angry face with horns devil angry horns
+💀 skull dead skeleton creepy death
+☠️ skull and crossbones poison danger deadly scary death pirate evil
+💩 pile of poo hankey shitface fail turd shit
+🤡 clown face face
+👹 ogre monster red mask halloween scary creepy devil demon japanese ogre
+👺 goblin red evil mask monster scary creepy japanese goblin
+👻 ghost halloween spooky scary
+👽 alien UFO paul weird outer space
+👾 alien monster game arcade play
+🤖 robot computer machine bot
+😺 grinning cat animal cats happy smile
+😸 grinning cat with smiling eyes animal cats smile
+😹 cat with tears of joy animal cats haha happy tears
+😻 smiling cat with heart eyes animal love like affection cats valentines heart
+😼 cat with wry smile animal cats smirk
+😽 kissing cat animal cats kiss
+🙀 weary cat animal cats munch scared scream
+😿 crying cat animal tears weep sad cats upset cry
+😾 pouting cat animal cats
+🙈 see no evil monkey monkey animal nature haha
+🙉 hear no evil monkey animal monkey nature
+🙊 speak no evil monkey monkey animal nature omg
+💋 kiss mark face lips love like affection valentines
+💌 love letter email like affection envelope valentines
+💘 heart with arrow love like heart affection valentines
+💝 heart with ribbon love valentines
+💖 sparkling heart love like affection valentines
+💗 growing heart like love affection valentines pink
+💓 beating heart love like affection valentines pink heart
+💞 revolving hearts love like affection valentines
+💕 two hearts love like affection valentines heart
+💟 heart decoration purple-square love like
+❣️ heart exclamation decoration love
+💔 broken heart sad sorry break heart heartbreak
+❤️ red heart love like valentines
+🧡 orange heart love like affection valentines
+💛 yellow heart love like affection valentines
+💚 green heart love like affection valentines
+💙 blue heart love like affection valentines
+💜 purple heart love like affection valentines
+🤎 brown heart coffee
+🖤 black heart evil
+🤍 white heart pure
+💯 hundred points score perfect numbers century exam quiz test pass hundred
+💢 anger symbol angry mad
+💥 collision bomb explode explosion collision blown
+💫 dizzy star sparkle shoot magic
+💦 sweat droplets water drip oops
+💨 dashing away wind air fast shoo fart smoke puff
+🕳️ hole embarrassing
+💣 bomb boom explode explosion terrorism
+💬 speech balloon bubble words message talk chatting
+👁️‍🗨️ eye in speech bubble info
+🗨️ left speech bubble words message talk chatting
+🗯️ right anger bubble caption speech thinking mad
+💭 thought balloon bubble cloud speech thinking dream
+💤 zzz sleepy tired dream
+👋 waving hand hands gesture goodbye solong farewell hello hi palm
+🤚 raised back of hand fingers raised backhand
+🖐️ hand with fingers splayed hand fingers palm
+✋ raised hand fingers stop highfive palm ban
+🖖 vulcan salute hand fingers spock star trek
+👌 ok hand fingers limbs perfect ok okay
+🤏 pinching hand tiny small size
+✌️ victory hand fingers ohyeah hand peace victory two
+🤞 crossed fingers good lucky
+🤟 love you gesture hand fingers gesture
+🤘 sign of the horns hand fingers evil eye sign of horns rock on
+🤙 call me hand hands gesture shaka
+👈 backhand index pointing left direction fingers hand left
+👉 backhand index pointing right fingers hand direction right
+👆 backhand index pointing up fingers hand direction up
+🖕 middle finger hand fingers rude middle flipping
+👇 backhand index pointing down fingers hand direction down
+☝️ index pointing up hand fingers direction up
+👍 thumbs up thumbsup yes awesome good agree accept cool hand like +1
+👎 thumbs down thumbsdown no dislike hand -1
+🫆 Fingerprint
+✊ raised fist fingers hand grasp
+👊 oncoming fist angry violence fist hit attack hand
+🤛 left facing fist hand fistbump
+🤜 right facing fist hand fistbump
+👏 clapping hands hands praise applause congrats yay
+🙌 raising hands gesture hooray yea celebration hands
+👐 open hands fingers butterfly hands open
+🤲 palms up together hands gesture cupped prayer
+🤝 handshake agreement shake
+🙏 folded hands please hope wish namaste highfive pray
+✍️ writing hand lower left ballpoint pen stationery write compose
+💅 nail polish beauty manicure finger fashion nail
+🤳 selfie camera phone
+💪 flexed biceps arm flex hand summer strong biceps
+🦾 mechanical arm accessibility
+🦿 mechanical leg accessibility
+🦵 leg kick limb
+🦶 foot kick stomp
+👂 ear face hear sound listen
+🦻 ear with hearing aid accessibility
+👃 nose smell sniff
+🧠 brain smart intelligent
+🦷 tooth teeth dentist
+🦴 bone skeleton
+👀 eyes look watch stalk peek see
+👁️ eye face look see watch stare
+👅 tongue mouth playful
+👄 mouth mouth kiss
+👶 baby child boy girl toddler
+🧒 child gender-neutral young
+👦 boy man male guy teenager
+👧 girl female woman teenager
+🧑 person gender-neutral person
+👱 person blond hair hairstyle
+👨 man mustache father dad guy classy sir moustache
+🧔 man beard person bewhiskered
+👨‍🦰 man red hair hairstyle
+👨‍🦱 man curly hair hairstyle
+👨‍🦳 man white hair old elder
+👨‍🦲 man bald hairless
+👩 woman female girls lady
+👩‍🦰 woman red hair hairstyle
+🧑‍🦰 person red hair hairstyle
+👩‍🦱 woman curly hair hairstyle
+🧑‍🦱 person curly hair hairstyle
+👩‍🦳 woman white hair old elder
+🧑‍🦳 person white hair elder old
+👩‍🦲 woman bald hairless
+🧑‍🦲 person bald hairless
+👱‍♀️ woman blond hair woman female girl blonde person
+👱‍♂️ man blond hair man male boy blonde guy person
+🧓 older person human elder senior gender-neutral
+👴 old man human male men old elder senior
+👵 old woman human female women lady old elder senior
+🙍 person frowning worried
+🙍‍♂️ man frowning male boy man sad depressed discouraged unhappy
+🙍‍♀️ woman frowning female girl woman sad depressed discouraged unhappy
+🙎 person pouting upset
+🙎‍♂️ man pouting male boy man
+🙎‍♀️ woman pouting female girl woman
+🙅 person gesturing no decline
+🙅‍♂️ man gesturing no male boy man nope
+🙅‍♀️ woman gesturing no female girl woman nope
+🙆 person gesturing ok agree
+🙆‍♂️ man gesturing ok men boy male blue human man
+🙆‍♀️ woman gesturing ok women girl female pink human woman
+💁 person tipping hand information
+💁‍♂️ man tipping hand male boy man human information
+💁‍♀️ woman tipping hand female girl woman human information
+🙋 person raising hand question
+🙋‍♂️ man raising hand male boy man
+🙋‍♀️ woman raising hand female girl woman
+🧏 deaf person accessibility
+🧏‍♂️ deaf man accessibility
+🧏‍♀️ deaf woman accessibility
+🙇 person bowing respectiful
+🙇‍♂️ man bowing man male boy
+🙇‍♀️ woman bowing woman female girl
+🤦 person facepalming disappointed
+🤦‍♂️ man facepalming man male boy disbelief
+🤦‍♀️ woman facepalming woman female girl disbelief
+🤷 person shrugging regardless
+🤷‍♂️ man shrugging man male boy confused indifferent doubt
+🤷‍♀️ woman shrugging woman female girl confused indifferent doubt
+🧑‍⚕️ health worker hospital
+👨‍⚕️ man health worker doctor nurse therapist healthcare man human
+👩‍⚕️ woman health worker doctor nurse therapist healthcare woman human
+🧑‍🎓 student learn
+👨‍🎓 man student graduate man human
+👩‍🎓 woman student graduate woman human
+🧑‍🏫 teacher professor
+👨‍🏫 man teacher instructor professor man human
+👩‍🏫 woman teacher instructor professor woman human
+🧑‍⚖️ judge law
+👨‍⚖️ man judge justice court man human
+👩‍⚖️ woman judge justice court woman human
+🧑‍🌾 farmer crops
+👨‍🌾 man farmer rancher gardener man human
+👩‍🌾 woman farmer rancher gardener woman human
+🧑‍🍳 cook food kitchen culinary
+👨‍🍳 man cook chef man human
+👩‍🍳 woman cook chef woman human
+🧑‍🔧 mechanic worker technician
+👨‍🔧 man mechanic plumber man human wrench
+👩‍🔧 woman mechanic plumber woman human wrench
+🧑‍🏭 factory worker labor
+👨‍🏭 man factory worker assembly industrial man human
+👩‍🏭 woman factory worker assembly industrial woman human
+🧑‍💼 office worker business
+👨‍💼 man office worker business manager man human
+👩‍💼 woman office worker business manager woman human
+🧑‍🔬 scientist chemistry
+👨‍🔬 man scientist biologist chemist engineer physicist man human
+👩‍🔬 woman scientist biologist chemist engineer physicist woman human
+🧑‍💻 technologist computer
+👨‍💻 man technologist coder developer engineer programmer software man human laptop computer
+👩‍💻 woman technologist coder developer engineer programmer software woman human laptop computer
+🧑‍🎤 singer song artist performer
+👨‍🎤 man singer rockstar entertainer man human
+👩‍🎤 woman singer rockstar entertainer woman human
+🧑‍🎨 artist painting draw creativity
+👨‍🎨 man artist painter man human
+👩‍🎨 woman artist painter woman human
+🧑‍✈️ pilot fly plane airplane
+👨‍✈️ man pilot aviator plane man human
+👩‍✈️ woman pilot aviator plane woman human
+🧑‍🚀 astronaut outerspace
+👨‍🚀 man astronaut space rocket man human
+👩‍🚀 woman astronaut space rocket woman human
+🧑‍🚒 firefighter fire
+👨‍🚒 man firefighter fireman man human
+👩‍🚒 woman firefighter fireman woman human
+👮 police officer cop
+👮‍♂️ man police officer man police law legal enforcement arrest 911
+👮‍♀️ woman police officer woman police law legal enforcement arrest 911 female
+🕵️ detective human spy detective
+🕵️‍♂️ man detective crime
+🕵️‍♀️ woman detective human spy detective female woman
+💂 guard protect
+💂‍♂️ man guard uk gb british male guy royal
+💂‍♀️ woman guard uk gb british female royal woman
+👷 construction worker labor build
+👷‍♂️ man construction worker male human wip guy build construction worker labor
+👷‍♀️ woman construction worker female human wip build construction worker labor woman
+🤴 prince boy man male crown royal king
+👸 princess girl woman female blond crown royal queen
+👳 person wearing turban headdress
+👳‍♂️ man wearing turban male indian hinduism arabs
+👳‍♀️ woman wearing turban female indian hinduism arabs woman
+👲 man with skullcap male boy chinese
+🧕 woman with headscarf female hijab mantilla tichel
+🤵 man in tuxedo couple marriage wedding groom
+👰 bride with veil couple marriage wedding woman bride
+🤰 pregnant woman baby
+🤱 breast feeding nursing baby
+👼 baby angel heaven wings halo
+🎅 santa claus festival man male xmas father christmas
+🤶 mrs claus woman female xmas mother christmas
+🦸 superhero marvel
+🦸‍♂️ man superhero man male good hero superpowers
+🦸‍♀️ woman superhero woman female good heroine superpowers
+🦹 supervillain marvel
+🦹‍♂️ man supervillain man male evil bad criminal hero superpowers
+🦹‍♀️ woman supervillain woman female evil bad criminal heroine superpowers
+🧙 mage magic
+🧙‍♂️ man mage man male mage sorcerer
+🧙‍♀️ woman mage woman female mage witch
+🧚 fairy wings magical
+🧚‍♂️ man fairy man male
+🧚‍♀️ woman fairy woman female
+🧛 vampire blood twilight
+🧛‍♂️ man vampire man male dracula
+🧛‍♀️ woman vampire woman female
+🧜 merperson sea
+🧜‍♂️ merman man male triton
+🧜‍♀️ mermaid woman female merwoman ariel
+🧝 elf magical
+🧝‍♂️ man elf man male
+🧝‍♀️ woman elf woman female
+🧞 genie magical wishes
+🧞‍♂️ man genie man male
+🧞‍♀️ woman genie woman female
+🧟 zombie dead
+🧟‍♂️ man zombie man male dracula undead walking dead
+🧟‍♀️ woman zombie woman female undead walking dead
+💆 person getting massage relax
+💆‍♂️ man getting massage male boy man head
+💆‍♀️ woman getting massage female girl woman head
+💇 person getting haircut hairstyle
+💇‍♂️ man getting haircut male boy man
+💇‍♀️ woman getting haircut female girl woman
+🚶 person walking move
+🚶‍♂️ man walking human feet steps
+🚶‍♀️ woman walking human feet steps woman female
+🧍 person standing still
+🧍‍♂️ man standing still
+🧍‍♀️ woman standing still
+🧎 person kneeling pray respectful
+🧎‍♂️ man kneeling pray respectful
+🧎‍♀️ woman kneeling respectful pray
+🧑‍🦯 person with probing cane blind
+👨‍🦯 man with probing cane blind
+👩‍🦯 woman with probing cane blind
+🧑‍🦼 person in motorized wheelchair disability accessibility
+👨‍🦼 man in motorized wheelchair disability accessibility
+👩‍🦼 woman in motorized wheelchair disability accessibility
+🧑‍🦽 person in manual wheelchair disability accessibility
+👨‍🦽 man in manual wheelchair disability accessibility
+👩‍🦽 woman in manual wheelchair disability accessibility
+🏃 person running move
+🏃‍♂️ man running man walking exercise race running
+🏃‍♀️ woman running woman walking exercise race running female
+💃 woman dancing female girl woman fun
+🕺 man dancing male boy fun dancer
+🕴️ man in suit levitating suit business levitate hover jump
+👯 people with bunny ears perform costume
+👯‍♂️ men with bunny ears male bunny men boys
+👯‍♀️ women with bunny ears female bunny women girls
+🧖 person in steamy room relax spa
+🧖‍♂️ man in steamy room male man spa steamroom sauna
+🧖‍♀️ woman in steamy room female woman spa steamroom sauna
+🧗 person climbing sport
+🧗‍♂️ man climbing sports hobby man male rock
+🧗‍♀️ woman climbing sports hobby woman female rock
+🤺 person fencing sports fencing sword
+🏇 horse racing animal betting competition gambling luck
+⛷️ skier sports winter snow
+🏂 snowboarder sports winter
+🏌️ person golfing sports business
+🏌️‍♂️ man golfing sport
+🏌️‍♀️ woman golfing sports business woman female
+🏄 person surfing sport sea
+🏄‍♂️ man surfing sports ocean sea summer beach
+🏄‍♀️ woman surfing sports ocean sea summer beach woman female
+🚣 person rowing boat sport move
+🚣‍♂️ man rowing boat sports hobby water ship
+🚣‍♀️ woman rowing boat sports hobby water ship woman female
+🏊 person swimming sport pool
+🏊‍♂️ man swimming sports exercise human athlete water summer
+🏊‍♀️ woman swimming sports exercise human athlete water summer woman female
+⛹️ person bouncing ball sports human
+⛹️‍♂️ man bouncing ball sport
+⛹️‍♀️ woman bouncing ball sports human woman female
+🏋️ person lifting weights sports training exercise
+🏋️‍♂️ man lifting weights sport
+🏋️‍♀️ woman lifting weights sports training exercise woman female
+🚴 person biking sport move
+🚴‍♂️ man biking sports bike exercise hipster
+🚴‍♀️ woman biking sports bike exercise hipster woman female
+🚵 person mountain biking sport move
+🚵‍♂️ man mountain biking transportation sports human race bike
+🚵‍♀️ woman mountain biking transportation sports human race bike woman female
+🤸 person cartwheeling sport gymnastic
+🤸‍♂️ man cartwheeling gymnastics
+🤸‍♀️ woman cartwheeling gymnastics
+🤼 people wrestling sport
+🤼‍♂️ men wrestling sports wrestlers
+🤼‍♀️ women wrestling sports wrestlers
+🤽 person playing water polo sport
+🤽‍♂️ man playing water polo sports pool
+🤽‍♀️ woman playing water polo sports pool
+🤾 person playing handball sport
+🤾‍♂️ man playing handball sports
+🤾‍♀️ woman playing handball sports
+🤹 person juggling performance balance
+🤹‍♂️ man juggling juggle balance skill multitask
+🤹‍♀️ woman juggling juggle balance skill multitask
+🧘 person in lotus position meditate
+🧘‍♂️ man in lotus position man male meditation yoga serenity zen mindfulness
+🧘‍♀️ woman in lotus position woman female meditation yoga serenity zen mindfulness
+🛀 person taking bath clean shower bathroom
+🛌 person in bed bed rest
+🧑‍🤝‍🧑 people holding hands friendship
+👭 women holding hands pair friendship couple love like female people human
+👫 woman and man holding hands pair people human love date dating like affection valentines marriage
+👬 men holding hands pair couple love like bromance friendship people human
+💏 kiss pair valentines love like dating marriage
+👩‍❤️‍💋‍👨 kiss woman man love
+👨‍❤️‍💋‍👨 kiss man man pair valentines love like dating marriage
+👩‍❤️‍💋‍👩 kiss woman woman pair valentines love like dating marriage
+💑 couple with heart pair love like affection human dating valentines marriage
+👩‍❤️‍👨 couple with heart woman man love
+👨‍❤️‍👨 couple with heart man man pair love like affection human dating valentines marriage
+👩‍❤️‍👩 couple with heart woman woman pair love like affection human dating valentines marriage
+👪 family home parents child mom dad father mother people human
+👨‍👩‍👦 family man woman boy love
+👨‍👩‍👧 family man woman girl home parents people human child
+👨‍👩‍👧‍👦 family man woman girl boy home parents people human children
+👨‍👩‍👦‍👦 family man woman boy boy home parents people human children
+👨‍👩‍👧‍👧 family man woman girl girl home parents people human children
+👨‍👨‍👦 family man man boy home parents people human children
+👨‍👨‍👧 family man man girl home parents people human children
+👨‍👨‍👧‍👦 family man man girl boy home parents people human children
+👨‍👨‍👦‍👦 family man man boy boy home parents people human children
+👨‍👨‍👧‍👧 family man man girl girl home parents people human children
+👩‍👩‍👦 family woman woman boy home parents people human children
+👩‍👩‍👧 family woman woman girl home parents people human children
+👩‍👩‍👧‍👦 family woman woman girl boy home parents people human children
+👩‍👩‍👦‍👦 family woman woman boy boy home parents people human children
+👩‍👩‍👧‍👧 family woman woman girl girl home parents people human children
+👨‍👦 family man boy home parent people human child
+👨‍👦‍👦 family man boy boy home parent people human children
+👨‍👧 family man girl home parent people human child
+👨‍👧‍👦 family man girl boy home parent people human children
+👨‍👧‍👧 family man girl girl home parent people human children
+👩‍👦 family woman boy home parent people human child
+👩‍👦‍👦 family woman boy boy home parent people human children
+👩‍👧 family woman girl home parent people human child
+👩‍👧‍👦 family woman girl boy home parent people human children
+👩‍👧‍👧 family woman girl girl home parent people human children
+🗣️ speaking head user person human sing say talk
+👤 bust in silhouette user person human
+👥 busts in silhouette user person human group team
+👣 footprints feet tracking walking beach
+🐵 monkey face animal nature circus
+🐒 monkey animal nature banana circus
+🦍 gorilla animal nature circus
+🦧 orangutan animal
+🐶 dog face animal friend nature woof puppy pet faithful
+🐕 dog animal nature friend doge pet faithful
+🦮 guide dog animal blind
+🐕‍🦺 service dog blind animal
+🐩 poodle dog animal 101 nature pet
+🐺 wolf animal nature wild
+🦊 fox animal nature face
+🦝 raccoon animal nature
+🐱 cat face animal meow nature pet kitten
+🐈 cat animal meow pet cats
+🦁 lion animal nature
+🐯 tiger face animal cat danger wild nature roar
+🐅 tiger animal nature roar
+🐆 leopard animal nature
+🐴 horse face animal brown nature
+🐎 horse animal gamble luck
+🦄 unicorn animal nature mystical
+🦓 zebra animal nature stripes safari
+🦌 deer animal nature horns venison
+🐮 cow face beef ox animal nature moo milk
+🐂 ox animal cow beef
+🐃 water buffalo animal nature ox cow
+🐄 cow beef ox animal nature moo milk
+🐷 pig face animal oink nature
+🐖 pig animal nature
+🐗 boar animal nature
+🐽 pig nose animal oink
+🐏 ram animal sheep nature
+🐑 ewe animal nature wool shipit
+🐐 goat animal nature
+🐪 camel animal hot desert hump
+🐫 two hump camel animal nature hot desert hump
+🦙 llama animal nature alpaca
+🦒 giraffe animal nature spots safari
+🐘 elephant animal nature nose th circus
+🦏 rhinoceros animal nature horn
+🦛 hippopotamus animal nature
+🐭 mouse face animal nature cheese wedge rodent
+🐁 mouse animal nature rodent
+🐀 rat animal mouse rodent
+🐹 hamster animal nature
+🐰 rabbit face animal nature pet spring magic bunny
+🐇 rabbit animal nature pet magic spring
+🐿️ chipmunk animal nature rodent squirrel
+🦔 hedgehog animal nature spiny
+🦇 bat animal nature blind vampire
+🐻 bear animal nature wild
+🐨 koala animal nature
+🐼 panda animal nature panda
+🦥 sloth animal
+🦦 otter animal
+🦨 skunk animal
+🦘 kangaroo animal nature australia joey hop marsupial
+🦡 badger animal nature honey
+🐾 paw prints animal tracking footprints dog cat pet feet
+🦃 turkey animal bird
+🐔 chicken animal cluck nature bird
+🐓 rooster animal nature chicken
+🐣 hatching chick animal chicken egg born baby bird
+🐤 baby chick animal chicken bird
+🐥 front facing baby chick animal chicken baby bird
+🐦 bird animal nature fly tweet spring
+🐧 penguin animal nature
+🕊️ dove animal bird
+🦅 eagle animal nature bird
+🦆 duck animal nature bird mallard
+🦢 swan animal nature bird
+🦉 owl animal nature bird hoot
+🦩 flamingo animal
+🦚 peacock animal nature peahen bird
+🦜 parrot animal nature bird pirate talk
+🐸 frog animal nature croak toad
+🐊 crocodile animal nature reptile lizard alligator
+🐢 turtle animal slow nature tortoise
+🦎 lizard animal nature reptile
+🐍 snake animal evil nature hiss python
+🐲 dragon face animal myth nature chinese green
+🐉 dragon animal myth nature chinese green
+🦕 sauropod animal nature dinosaur brachiosaurus brontosaurus diplodocus extinct
+🦖 t rex animal nature dinosaur tyrannosaurus extinct
+🐳 spouting whale animal nature sea ocean
+🐋 whale animal nature sea ocean
+🐬 dolphin animal nature fish sea ocean flipper fins beach
+🐟 fish animal food nature
+🐠 tropical fish animal swim ocean beach nemo
+🐡 blowfish animal nature food sea ocean
+🦈 shark animal nature fish sea ocean jaws fins beach
+🐙 octopus animal creature ocean sea nature beach
+🐚 spiral shell nature sea beach
+🐌 snail slow animal shell
+🦋 butterfly animal insect nature caterpillar
+🐛 bug animal insect nature worm
+🐜 ant animal insect nature bug
+🐝 honeybee animal insect nature bug spring honey
+🐞 lady beetle animal insect nature ladybug
+🦗 cricket animal cricket chirp
+🕷️ spider animal arachnid
+🕸️ spider web animal insect arachnid silk
+🦂 scorpion animal arachnid
+🦟 mosquito animal nature insect malaria
+🦠 microbe amoeba bacteria germs virus
+💐 bouquet flowers nature spring
+🌸 cherry blossom nature plant spring flower
+💮 white flower japanese spring
+🏵️ rosette flower decoration military
+🌹 rose flowers valentines love spring
+🥀 wilted flower plant nature flower
+🌺 hibiscus plant vegetable flowers beach
+🌻 sunflower nature plant fall
+🌼 blossom nature flowers yellow
+🌷 tulip flowers plant nature summer spring
+🌱 seedling plant nature grass lawn spring
+🌲 evergreen tree plant nature
+🌳 deciduous tree plant nature
+🌴 palm tree plant vegetable nature summer beach mojito tropical
+🌵 cactus vegetable plant nature
+🌾 sheaf of rice nature plant
+🌿 herb vegetable plant medicine weed grass lawn
+☘️ shamrock vegetable plant nature irish clover
+🍀 four leaf clover vegetable plant nature lucky irish
+🍁 maple leaf nature plant vegetable ca fall
+🫜 root Vegetable
+🍂 fallen leaf nature plant vegetable leaves
+🪾 Leafless Tree
+🍃 leaf fluttering in wind nature plant tree vegetable grass lawn spring
+🍇 grapes fruit food wine
+🍈 melon fruit nature food
+🍉 watermelon fruit food picnic summer
+🍊 tangerine food fruit nature orange
+🍋 lemon fruit nature
+🍌 banana fruit food monkey
+🍍 pineapple fruit nature food
+🥭 mango fruit food tropical
+🍎 red apple fruit mac school
+🍏 green apple fruit nature
+🍐 pear fruit nature food
+🍑 peach fruit nature food
+🍒 cherries food fruit
+🍓 strawberry fruit food nature
+🥝 kiwi fruit fruit food
+🍅 tomato fruit vegetable nature food
+🥥 coconut fruit nature food palm
+🥑 avocado fruit food
+🍆 eggplant vegetable nature food aubergine
+🥔 potato food tuber vegatable starch
+🥕 carrot vegetable food orange
+🌽 ear of corn food vegetable plant
+🌶️ hot pepper food spicy chilli chili
+🥒 cucumber fruit food pickle
+🥬 leafy green food vegetable plant bok choy cabbage kale lettuce
+🥦 broccoli fruit food vegetable
+🧄 garlic food spice cook
+🧅 onion cook food spice
+🍄 mushroom plant vegetable
+🥜 peanuts food nut
+🌰 chestnut food squirrel
+🍞 bread food wheat breakfast toast
+🥐 croissant food bread french
+🥖 baguette bread food bread french
+🥨 pretzel food bread twisted
+🥯 bagel food bread bakery schmear
+🥞 pancakes food breakfast flapjacks hotcakes
+🧇 waffle food breakfast
+🧀 cheese wedge food chadder
+🍖 meat on bone good food drumstick
+🍗 poultry leg food meat drumstick bird chicken turkey
+🥩 cut of meat food cow meat cut chop lambchop porkchop
+🥓 bacon food breakfast pork pig meat
+🍔 hamburger meat fast food beef cheeseburger mcdonalds burger king
+🍟 french fries chips snack fast food
+🍕 pizza food party
+🌭 hot dog food frankfurter
+🥪 sandwich food lunch bread
+🌮 taco food mexican
+🌯 burrito food mexican
+🥙 stuffed flatbread food flatbread stuffed gyro
+🧆 falafel food
+🥚 egg food chicken breakfast
+🍳 cooking food breakfast kitchen egg
+🥘 shallow pan of food food cooking casserole paella
+🍲 pot of food food meat soup
+🥣 bowl with spoon food breakfast cereal oatmeal porridge
+🥗 green salad food healthy lettuce
+🍿 popcorn food movie theater films snack
+🧈 butter food cook
+🧂 salt condiment shaker
+🥫 canned food food soup
+🍱 bento box food japanese box
+🍘 rice cracker food japanese
+🍙 rice ball food japanese
+🍚 cooked rice food china asian
+🍛 curry rice food spicy hot indian
+🍜 steaming bowl food japanese noodle chopsticks
+🍝 spaghetti food italian noodle
+🍠 roasted sweet potato food nature
+🍢 oden food japanese
+🍣 sushi food fish japanese rice
+🍤 fried shrimp food animal appetizer summer
+🍥 fish cake with swirl food japan sea beach narutomaki pink swirl kamaboko surimi ramen
+🥮 moon cake food autumn
+🍡 dango food dessert sweet japanese barbecue meat
+🥟 dumpling food empanada pierogi potsticker
+🥠 fortune cookie food prophecy
+🥡 takeout box food leftovers
+🦀 crab animal crustacean
+🦞 lobster animal nature bisque claws seafood
+🦐 shrimp animal ocean nature seafood
+🦑 squid animal nature ocean sea
+🦪 oyster food
+🍦 soft ice cream food hot dessert summer
+🍧 shaved ice hot dessert summer
+🍨 ice cream food hot dessert
+🍩 doughnut food dessert snack sweet donut
+🍪 cookie food snack oreo chocolate sweet dessert
+🎂 birthday cake food dessert cake
+🍰 shortcake food dessert
+🧁 cupcake food dessert bakery sweet
+🥧 pie food dessert pastry
+🍫 chocolate bar food snack dessert sweet
+🍬 candy snack dessert sweet lolly
+🍭 lollipop food snack candy sweet
+🍮 custard dessert food
+🍯 honey pot bees sweet kitchen
+🍼 baby bottle food container milk
+🥛 glass of milk beverage drink cow
+☕ hot beverage beverage caffeine latte espresso coffee
+🍵 teacup without handle drink bowl breakfast green british
+🍶 sake wine drink drunk beverage japanese alcohol booze
+🍾 bottle with popping cork drink wine bottle celebration
+🍷 wine glass drink beverage drunk alcohol booze
+🍸 cocktail glass drink drunk alcohol beverage booze mojito
+🍹 tropical drink beverage cocktail summer beach alcohol booze mojito
+🍺 beer mug relax beverage drink drunk party pub summer alcohol booze
+🍻 clinking beer mugs relax beverage drink drunk party pub summer alcohol booze
+🥂 clinking glasses beverage drink party alcohol celebrate cheers wine champagne toast
+🥃 tumbler glass drink beverage drunk alcohol liquor booze bourbon scotch whisky glass shot
+🥤 cup with straw drink soda
+🧃 beverage box drink
+🧉 mate drink tea beverage
+🧊 ice water cold
+🥢 chopsticks food
+🍽️ fork and knife with plate food eat meal lunch dinner restaurant
+🍴 fork and knife cutlery kitchen
+🥄 spoon cutlery kitchen tableware
+🔪 kitchen knife knife blade cutlery kitchen weapon
+🏺 amphora vase jar
+🌍 globe showing europe africa globe world international
+🌎 globe showing americas globe world USA international
+🌏 globe showing asia australia globe world east international
+🌐 globe with meridians earth international world internet interweb i18n
+🗺️ world map location direction
+🗾 map of japan nation country japanese asia
+🧭 compass magnetic navigation orienteering
+🏔️ snow capped mountain photo nature environment winter cold
+⛰️ mountain photo nature environment
+🌋 volcano photo nature disaster
+🗻 mount fuji photo mountain nature japanese
+🏕️ camping photo outdoors tent
+🏖️ beach with umbrella weather summer sunny sand mojito
+🏜️ desert photo warm saharah
+🏝️ desert island photo tropical mojito
+🏞️ national park photo environment nature
+🏟️ stadium photo place sports concert venue
+🏛️ classical building art culture history
+🏗️ building construction wip working progress
+🧱 brick bricks
+🏘️ houses buildings photo
+🏚️ derelict house abandon evict broken building
+🏠 house building home
+🏡 house with garden home plant nature
+🏢 office building building bureau work
+🏣 japanese post office building envelope communication
+🏤 post office building email
+🏥 hospital building health surgery doctor
+🏦 bank building money sales cash business enterprise
+🏨 hotel building accomodation checkin
+🏩 love hotel like affection dating
+🏪 convenience store building shopping groceries
+🏫 school building student education learn teach
+🏬 department store building shopping mall
+🏭 factory building industry pollution smoke
+🏯 japanese castle photo building
+🏰 castle building royalty history
+💒 wedding love like affection couple marriage bride groom
+🗼 tokyo tower photo japanese
+🗽 statue of liberty american newyork
+⛪ church building religion christ
+🕌 mosque islam worship minaret
+🛕 hindu temple religion
+🕍 synagogue judaism worship temple jewish
+⛩️ shinto shrine temple japan kyoto
+🕋 kaaba mecca mosque islam
+⛲ fountain photo summer water fresh
+⛺ tent photo camping outdoors
+🌁 foggy photo mountain
+🌃 night with stars evening city downtown
+🏙️ cityscape photo night life urban
+🌄 sunrise over mountains view vacation photo
+🌅 sunrise morning view vacation photo
+🌆 cityscape at dusk photo evening sky buildings
+🌇 sunset photo good morning dawn
+🌉 bridge at night photo sanfrancisco
+♨️ hot springs bath warm relax
+🎠 carousel horse photo carnival
+🎡 ferris wheel photo carnival londoneye
+🎢 roller coaster carnival playground photo fun
+💈 barber pole hair salon style
+🎪 circus tent festival carnival party
+🚂 locomotive transportation vehicle train
+🚃 railway car transportation vehicle
+🚄 high speed train transportation vehicle
+🚅 bullet train transportation vehicle speed fast public travel
+🚆 train transportation vehicle
+🚇 metro transportation blue-square mrt underground tube
+🚈 light rail transportation vehicle
+🚉 station transportation vehicle public
+🚊 tram transportation vehicle
+🚝 monorail transportation vehicle
+🚞 mountain railway transportation vehicle
+🚋 tram car transportation vehicle carriage public travel
+🚌 bus car vehicle transportation
+🚍 oncoming bus vehicle transportation
+🚎 trolleybus bart transportation vehicle
+🚐 minibus vehicle car transportation
+🚑 ambulance health 911 hospital
+🚒 fire engine transportation cars vehicle
+🚓 police car vehicle cars transportation law legal enforcement
+🚔 oncoming police car vehicle law legal enforcement 911
+🚕 taxi uber vehicle cars transportation
+🚖 oncoming taxi vehicle cars uber
+🚗 automobile red transportation vehicle
+🚘 oncoming automobile car vehicle transportation
+🚙 sport utility vehicle transportation vehicle
+🚚 delivery truck cars transportation
+🚛 articulated lorry vehicle cars transportation express
+🚜 tractor vehicle car farming agriculture
+🏎️ racing car sports race fast formula f1
+🏍️ motorcycle race sports fast
+🛵 motor scooter vehicle vespa sasha
+🦽 manual wheelchair accessibility
+🦼 motorized wheelchair accessibility
+🛺 auto rickshaw move transportation
+🚲 bicycle sports bicycle exercise hipster
+🛴 kick scooter vehicle kick razor
+🛹 skateboard board
+🚏 bus stop transportation wait
+🛣️ motorway road cupertino interstate highway
+🛤️ railway track train transportation
+🛢️ oil drum barrell
+⛽ fuel pump gas station petroleum
+🚨 police car light police ambulance 911 emergency alert error pinged law legal
+🚥 horizontal traffic light transportation signal
+🚦 vertical traffic light transportation driving
+🛑 stop sign stop
+🚧 construction wip progress caution warning
+⚓ anchor ship ferry sea boat
+⛵ sailboat ship summer transportation water sailing
+🛶 canoe boat paddle water ship
+🚤 speedboat ship transportation vehicle summer
+🛳️ passenger ship yacht cruise ferry
+⛴️ ferry boat ship yacht
+🛥️ motor boat ship
+🚢 ship transportation titanic deploy
+✈️ airplane vehicle transportation flight fly
+🛩️ small airplane flight transportation fly vehicle
+🛫 airplane departure airport flight landing
+🛬 airplane arrival airport flight boarding
+🪂 parachute fly glide
+💺 seat sit airplane transport bus flight fly
+🚁 helicopter transportation vehicle fly
+🚟 suspension railway vehicle transportation
+🚠 mountain cableway transportation vehicle ski
+🚡 aerial tramway transportation vehicle ski
+🛰️ satellite communication gps orbit spaceflight NASA ISS
+🚀 rocket launch ship staffmode NASA outer space outer space fly
+🛸 flying saucer transportation vehicle ufo
+🛎️ bellhop bell service
+🧳 luggage packing travel
+⌛ hourglass done time clock oldschool limit exam quiz test
+⏳ hourglass not done oldschool time countdown
+⌚ watch time accessories
+⏰ alarm clock time wake
+⏱️ stopwatch time deadline
+⏲️ timer clock alarm
+🕰️ mantelpiece clock time
+🕛 twelve o clock time noon midnight midday late early schedule
+🕧 twelve thirty time late early schedule
+🕐 one o clock time late early schedule
+🕜 one thirty time late early schedule
+🕑 two o clock time late early schedule
+🕝 two thirty time late early schedule
+🕒 three o clock time late early schedule
+🕞 three thirty time late early schedule
+🕓 four o clock time late early schedule
+🕟 four thirty time late early schedule
+🕔 five o clock time late early schedule
+🕠 five thirty time late early schedule
+🕕 six o clock time late early schedule dawn dusk
+🕡 six thirty time late early schedule
+🕖 seven o clock time late early schedule
+🕢 seven thirty time late early schedule
+🕗 eight o clock time late early schedule
+🕣 eight thirty time late early schedule
+🕘 nine o clock time late early schedule
+🕤 nine thirty time late early schedule
+🕙 ten o clock time late early schedule
+🕥 ten thirty time late early schedule
+🕚 eleven o clock time late early schedule
+🕦 eleven thirty time late early schedule
+🌑 new moon nature twilight planet space night evening sleep
+🌒 waxing crescent moon nature twilight planet space night evening sleep
+🌓 first quarter moon nature twilight planet space night evening sleep
+🌔 waxing gibbous moon nature night sky gray twilight planet space evening sleep
+🌕 full moon nature yellow twilight planet space night evening sleep
+🌖 waning gibbous moon nature twilight planet space night evening sleep waxing gibbous moon
+🌗 last quarter moon nature twilight planet space night evening sleep
+🌘 waning crescent moon nature twilight planet space night evening sleep
+🌙 crescent moon night sleep sky evening magic
+🌚 new moon face nature twilight planet space night evening sleep
+🌛 first quarter moon face nature twilight planet space night evening sleep
+🌜 last quarter moon face nature twilight planet space night evening sleep
+🌡️ thermometer weather temperature hot cold
+☀️ sun weather nature brightness summer beach spring
+🌝 full moon face nature twilight planet space night evening sleep
+🌞 sun with face nature morning sky
+🪐 ringed planet outerspace
+⭐ star night yellow
+🌟 glowing star night sparkle awesome good magic
+🌠 shooting star night photo
+🌌 milky way photo space stars
+☁️ cloud weather sky
+⛅ sun behind cloud weather nature cloudy morning fall spring
+⛈️ cloud with lightning and rain weather lightning
+🌤️ sun behind small cloud weather
+🌥️ sun behind large cloud weather
+🌦️ sun behind rain cloud weather
+🌧️ cloud with rain weather
+🌨️ cloud with snow weather
+🌩️ cloud with lightning weather thunder
+🌪️ tornado weather cyclone twister
+🌫️ fog weather
+🌬️ wind face gust air
+🌀 cyclone weather swirl blue cloud vortex spiral whirlpool spin tornado hurricane typhoon
+🌈 rainbow nature happy unicorn face photo sky spring
+🌂 closed umbrella weather rain drizzle
+☂️ umbrella weather spring
+☔ umbrella with rain drops rainy weather spring
+⛱️ umbrella on ground weather summer
+⚡ high voltage thunder weather lightning bolt fast
+❄️ snowflake winter season cold weather christmas xmas
+☃️ snowman winter season cold weather christmas xmas frozen
+⛄ snowman without snow winter season cold weather christmas xmas frozen without snow
+☄️ comet space
+🔥 fire hot cook flame
+💧 droplet water drip faucet spring
+🌊 water wave sea water wave nature tsunami disaster
+🎃 jack o lantern halloween light pumpkin creepy fall
+🎄 christmas tree festival vacation december xmas celebration
+🎆 fireworks photo festival carnival congratulations
+🎇 sparkler stars night shine
+🧨 firecracker dynamite boom explode explosion explosive
+✨ sparkles stars shine shiny cool awesome good magic
+🎈 balloon party celebration birthday circus
+🎉 party popper party congratulations birthday magic circus celebration tada
+🎊 confetti ball festival party birthday circus
+🎋 tanabata tree plant nature branch summer
+🎍 pine decoration plant nature vegetable panda pine decoration
+🎎 japanese dolls japanese toy kimono
+🎏 carp streamer fish japanese koinobori carp banner
+🎐 wind chime nature ding spring bell
+🎑 moon viewing ceremony photo japan asia tsukimi
+🧧 red envelope gift
+🎀 ribbon decoration pink girl bowtie
+🎁 wrapped gift present birthday christmas xmas
+🎗️ reminder ribbon sports cause support awareness
+🎟️ admission tickets sports concert entrance
+🎫 ticket event concert pass
+🎖️ military medal award winning army
+🏆 trophy win award contest place ftw ceremony
+🏅 sports medal award winning
+🥇 1st place medal award winning first
+🥈 2nd place medal award second
+🥉 3rd place medal award third
+⚽ soccer ball sports football
+⚾ baseball sports balls
