@@ -4,4 +4,7 @@ end
 
 alias v="vim"
 alias dv="doas vim"
-#source (/usr/bin/starship init fish --print-full-init | psub)
+alias l="ls -alsh"
+alias ll="ls -lsh"
+
+source (/usr/bin/starship init fish --print-full-init | psub)

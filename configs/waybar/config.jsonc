@@ -8,7 +8,9 @@
 		"custom/separator", 
 		"cpu", 
 		"custom/separator", 
-		"memory" 
+		"memory",
+        "custom/separator",
+        "custom/weather" 
 	],
 
 	"modules-center": [ "clock" ],
@@ -79,6 +81,15 @@
 	"hyprland/language": {
 		"format": "[{}]",
 		"format-en": "US",
-		"format-uk": "UA"
-	}
+		"format-uk": "UA",
+		"interval": 1
+	},
+	"tray": {
+		"icon-size": 22
+	},
+    "custom/weather": {
+        "format": "{text}",
+        "exec": "$HOME/.local/bin/weather",
+        "interval": 2
+    }
 }

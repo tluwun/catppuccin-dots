@@ -1,0 +1,23 @@
+add .
+bind -f common s player-stop 
+player-stop
+add ./
+add Music/
+live-filter 
+q
+bind -f common p player-pause
+bind common p player-pause
+player-pause
+add Slipknot - Psychososial.mp3
+add Rammstein - Du hast.mp3
+set output_plugin=alsa
+add Music/*
+source Downloads/
+set status_display_program=cmusfm
+set mpris=false
+source %
+set status_display_program cmusfm
+add cmusfm
+colorscheme catppuccin
+colorscheme gruvbox
+colorscheme cyan
