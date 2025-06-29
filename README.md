@@ -7,6 +7,7 @@ This is my catppuccin dots that i create on void linux.
 ![screenshot](./screenshots/screenshot2.png)
 
 # Soft
+- **OS** <- Void linux
 - **Window Manager** <- Hyprland
 - **Font** <- JetBrainsMono Nerd Font
 - **App launcher** <- fuzzel
