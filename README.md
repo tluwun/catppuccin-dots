@@ -7,24 +7,13 @@ This is my catppuccin dots that i create on void linux.
 ![screenshot](./screenshots/screenshot2.png)
 
 # Soft
---------------------------------------------------
-|   **OS**             | Void linux              |
-|   **Window Manager** | Hyprland                |
-|   **Font**           | JetBrainsMono Nerd Font |
-|   **App launcher**   | fuzzel                  |
-|   **Browser**        | firefox                 |
-|   **TERMINAL**       | alacritty               |
-|   **Wallpaper tool** | swww                    |
---------------------------------------------------
-
-# Features
-- [X] Animations
-- [X] Bold borders
-- [X] Big gaps
-- [] Blur
-- [] Shadows
-- [] Dim on inactive windows
-
+- **OS** <- Void linux
+- **Window Manager** <- Hyprland
+- **Font** <- JetBrainsMono Nerd Font
+- **App launcher** <- fuzzel
+- **Browser** <- firefox
+- **TERMINAL** <- alacritty
+- **Wallpaper tool** <- swww
 # Wallpapers
 
 ## Wallpaper №1
@@ -67,3 +56,4 @@ $ git clone https://github.com/tluwun/catppuccin-dots.git
 
 5. Copy wallpaper in your directory with wallpapers and set it
 6. Enjoy ⭐
+
