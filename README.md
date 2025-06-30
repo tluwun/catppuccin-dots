@@ -14,6 +14,31 @@ This is my catppuccin dots that i create on void linux.
 - **Browser** <- firefox
 - **TERMINAL** <- alacritty
 - **Wallpaper tool** <- swww
+# Wallpapers
+
+## Wallpaper №1
+![wallpaper](./wallpapers/knight-sit.png)
+## Wallpaper №2
+![wallpaper](./wallpapers/old-coputer.png)
+
+## Wallpaper №3
+![wallpaper](./wallpapers/pixel-planet.png)
+
+## Wallpaper №4
+![wallpaper](./wallpapers/knight-building.png)
+
+## Wallpaper №5
+![wallpaper](./wallpapers/3d-model.jpg)
+
+## Wallpaper №6
+![wallpaper](./wallpapers/pixel-napping.png)
+
+## Wallpaper №7
+![wallpaper](./wallpapers/pixel-galaxy.png)
+
+## Wallpaper №8
+![wallpaper](./wallpapers/pixel-templar.png)
+
 # Installation
 1. Install a necessary packages
 ```bash
@@ -21,8 +46,8 @@ This is my catppuccin dots that i create on void linux.
 ```
 2. Clone the repository
 ```bash
-    git clone https://github.com/tluwun/catppuccin-dots.git
-    ```
+$ git clone https://github.com/tluwun/catppuccin-dots.git
+```
 3. Copy the configs in $HOME/.config and vimrc
 4. copy scripts in $HOME/.local/bin/
 
