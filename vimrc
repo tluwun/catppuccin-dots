@@ -26,13 +26,15 @@ set clipboard=unnamedplus
 " show the cmd which i enter
 set showcmd
 
+" hightlighting in search mode
+set hlsearch
+
 call plug#begin()
 	Plug 'catppuccin/vim', { 'as': 'catppuccin' }
 	Plug 'preservim/nerdtree'
 	Plug 'preservim/nerdcommenter'
 	Plug 'ryanoasis/vim-devicons'
     Plug 'vim-airline/vim-airline'
-    Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'npm ci'}
 call plug#end()
 
 colorscheme catppuccin_mocha
