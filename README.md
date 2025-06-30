@@ -1,6 +1,5 @@
 # Welcome
 This is my catppuccin dots that i create on void linux.
-~Hello world~
 
 # Screenshots
 
