@@ -40,10 +40,12 @@ This is my catppuccin dots that i create on void linux.
 ## Wallpaper №8
 ![wallpaper](./wallpapers/knight-templar.png)
 
+All these wallpapers i take from https://github.com/orangci/walls-catppuccin-mocha
 # Installation
+
 1. Install a necessary packages
 ```bash
-        doas xbps-install wayland vim hyprland hyprlock hypridle cmus xdg-utils xdg-user-dirs elogind dbus cava cmatrix fish-shell Waybar fastfetch alacritty btop fuzzel qt5ct qt6ct starship git gsettings-desktop-schemas tuigreet curl grim slurp mesa-dri
+$ doas xbps-install wayland vim hyprland hyprlock hypridle cmus xdg-utils xdg-user-dirs elogind dbus cava cmatrix fish-shell Waybar fastfetch alacritty btop fuzzel qt5ct qt6ct starship git gsettings-desktop-schemas tuigreet curl grim slurp mesa-dri
 ```
 2. Clone the repository
 ```bash
