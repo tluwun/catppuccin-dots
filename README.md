@@ -18,8 +18,9 @@ This is my catppuccin dots that i create on void linux.
 
 ## Wallpaper №1
 ![wallpaper](./wallpapers/knight-sit.png)
+
 ## Wallpaper №2
-![wallpaper](./wallpapers/old-coputer.png)
+![wallpaper](./wallpapers/old-computer.png)
 
 ## Wallpaper №3
 ![wallpaper](./wallpapers/pixel-planet.png)
@@ -37,7 +38,7 @@ This is my catppuccin dots that i create on void linux.
 ![wallpaper](./wallpapers/pixel-galaxy.png)
 
 ## Wallpaper №8
-![wallpaper](./wallpapers/pixel-templar.png)
+![wallpaper](./wallpapers/knight-templar.png)
 
 # Installation
 1. Install a necessary packages
