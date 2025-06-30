@@ -76,7 +76,9 @@
 		"format-ethernet": "{ipaddr}/{cidir}  ",
 		"format-disconnected": " ",
 		"format-linked": "{ifname}",
-		"format-icons": [ "󰤯 ", "󰤟 ", "󰤢 ", "󰤥 ", "󰤨 " ]
+		"format-icons": [ "󰤯 ", "󰤟 ", "󰤢 ", "󰤥 ", "󰤨 " ],
+        "tooltip": false
+        
 	},
 	"hyprland/language": {
 		"format": "[{}]",
@@ -90,6 +92,7 @@
     "custom/weather": {
         "format": "{text}",
         "exec": "$HOME/.local/bin/weather",
-        "interval": 2
+        "interval": 2,
+        "tooltip": false
     }
 }
