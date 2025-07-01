@@ -1,5 +1,5 @@
 #!/usr/bin/bash
 
-REGION=Amsterdam
+REGION=Kovel
 
 curl -s "wttr.in/$REGION?format=1"
