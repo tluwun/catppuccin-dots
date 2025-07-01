@@ -26,7 +26,7 @@ set clipboard=unnamedplus
 " show the cmd which i enter
 set showcmd
 
-" hightlighting in search mode
+" set a hightlighting during a search
 set hlsearch
 
 call plug#begin()
