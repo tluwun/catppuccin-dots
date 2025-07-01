@@ -1,0 +1,17 @@
+[org/gnome/desktop/interface]
+font-name='JetBrainsMono Nerd Font 12'
+gtk-theme='Catppuccin-Mocha-Standard-Blue-Dark'
+icon-theme='Catppuccin-Mocha-Alt2'
+cursor-theme='Bibata-Modern-Classic'
+cursor-size=34
+
+[org/gtk/gtk4/settings/file-chooser]
+date-format='regular'
+location-mode='path-bar'
+show-hidden=false
+sidebar-width=140
+sort-column='name'
+sort-directories-first=true
+sort-order='ascending'
+type-format='category'
+view-type='list'
