@@ -14,6 +14,7 @@ This is my catppuccin dots that i create on void linux.
 - **Browser** <- firefox
 - **TERMINAL** <- alacritty
 - **Wallpaper tool** <- swww
+
 # Wallpapers
 
 ## Wallpaper №1
@@ -45,15 +46,26 @@ All these wallpapers i take from https://github.com/orangci/walls-catppuccin-moc
 
 1. Install a necessary packages
 ```bash
-$ doas xbps-install wayland vim hyprland hyprlock hypridle cmus xdg-utils xdg-user-dirs elogind dbus cava cmatrix fish-shell Waybar fastfetch alacritty btop fuzzel qt5ct qt6ct starship git gsettings-desktop-schemas tuigreet curl grim slurp mesa-dri
+# xbps-install wayland vim hyprland hyprlock hypridle cmus xdg-utils xdg-user-dirs elogind dbus cava cmatrix fish-shell Waybar fastfetch alacritty btop fuzzel qt5ct qt6ct starship git gsettings-desktop-schemas tuigreet curl grim slurp mesa-dri
 ```
 2. Clone the repository
 ```bash
 $ git clone https://github.com/tluwun/catppuccin-dots.git
 ```
 3. Copy the configs in $HOME/.config and vimrc
-4. copy scripts in $HOME/.local/bin/
+```bash
+$ cp -r catppuccin-dots/configs/* $HOME/.config/
+$ cp catppuccin-dots/vimrc $HOME/.vimrc
+```
+4. Copy scripts in $HOME/.local/bin/
+```bash
+$ mkdir $HOME/.local/bin
+$ cp catppuccin-dots/scripts/* $HOME/.local/bin
+```
 
-5. Copy wallpaper in your directory with wallpapers and set it
+5. Copy wallpaper in your wallpapers directory and set it
+```bash
+$ cp -r catppuccin /path/to/your/wallpaper/dir
+```
 6. Enjoy ⭐
 
