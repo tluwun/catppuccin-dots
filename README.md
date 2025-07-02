@@ -42,19 +42,11 @@ This is my catppuccin dots that i create on void linux.
 ![wallpaper](./wallpapers/knight-templar.png)
 
 All these wallpapers i take from https://github.com/orangci/walls-catppuccin-mocha
-# Shortcuts 
-
-**Open Terminal**: `Super + Enter`
-**Close Window**: `Super + Q`
-**App Launcher**: `Super + M`
-**Emoji**: `Super + E`
-**Clipboard menu**: `Super + C`
-
 # Installation
 
 1. Install a necessary packages
 ```bash
-# xbps-install vim hyprland hyprlock hypridle cmus xdg-utils xdg-user-dirs cava cmatrix fish-shell Waybar fastfetch alacritty btop fuzzel qt5ct qt6ct starship git gsettings-desktop-schemas tuigreet curl grim slurp
+# xbps-install wayland vim hyprland hyprlock hypridle cmus xdg-utils xdg-user-dirs elogind dbus cava cmatrix fish-shell Waybar fastfetch alacritty btop fuzzel qt5ct qt6ct starship git gsettings-desktop-schemas tuigreet curl grim slurp mesa-dri
 ```
 2. Clone the repository
 ```bash
@@ -73,5 +65,7 @@ $ cp catppuccin-dots/scripts/* $HOME/.local/bin
 
 5. Copy wallpaper in your wallpapers directory and set it
 ```bash
-$ cp -r catppuccin /path/to/your/wallpaper/dir ``` 
+$ cp -r catppuccin /path/to/your/wallpaper/dir
+```
 6. Enjoy ⭐
+
