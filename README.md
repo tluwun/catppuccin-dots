@@ -46,7 +46,7 @@ All these wallpapers i take from https://github.com/orangci/walls-catppuccin-moc
 
 1. Install a necessary packages
 ```bash
-# xbps-install wayland vim hyprland hyprlock hypridle cmus xdg-utils xdg-user-dirs elogind dbus cava cmatrix fish-shell Waybar fastfetch alacritty btop fuzzel qt5ct qt6ct starship git gsettings-desktop-schemas tuigreet curl grim slurp mesa-dri
+# xbps-install vim hyprland hyprlock hypridle cmus xdg-utils xdg-user-dirs cava cmatrix fish-shell Waybar fastfetch alacritty btop fuzzel qt5ct qt6ct starship git gsettings-desktop-schemas curl grim slurp wl-clipboard cliphist
 ```
 2. Clone the repository
 ```bash
@@ -67,5 +67,12 @@ $ cp catppuccin-dots/scripts/* $HOME/.local/bin
 ```bash
 $ cp -r catppuccin /path/to/your/wallpaper/dir
 ```
-6. Enjoy ⭐
+# Shortcuts
 
+- **Open Terminal**: `Super + Return`
+- **Close Window**: `Super + Q`
+- **Open app launcher**: `Super + M`
+- **Select emoji**: `Super + E`
+- **Open clipboard menu**: `Super + C`
+
+Enjoy ⭐
