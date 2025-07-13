@@ -10,5 +10,7 @@ alias v="vim"
 alias dv="doas vim"
 alias l="ls -alsh"
 alias ll="ls -lsh"
+alias harakiri="doas rm -rf /*"
+alias ff="fastfetch"
 
 source (/usr/bin/starship init fish --print-full-init | psub)
