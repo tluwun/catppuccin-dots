@@ -6,14 +6,19 @@ This is my catppuccin dots that i create on void linux.
 ![screenshot](./screenshots/screenshot1.png)
 ![screenshot](./screenshots/screenshot2.png)
 
-# Soft
+# Soft 
 - **OS** <- Void linux
 - **Window Manager** <- Hyprland
-- **Font** <- JetBrainsMono Nerd Font
 - **App launcher** <- fuzzel
 - **Browser** <- firefox
 - **TERMINAL** <- alacritty
 - **Wallpaper tool** <- swww
+- **File Manager** <- Nemo
+# Themes 
+- **Font Theme** <- JetBrainsMono Nerd Font
+- **Gtk Theme** <- [Catppuccin-Mocha-Standard-Blue-Dark](https://www.pling.com/p/1996672)
+- **Icon theme** <- [Catppuccin-Mocha-Alt2](https://www.pling.com/p/1715570)
+- **Cursor Theme** <- [Bibata-Modern-Classic](https://www.pling.com/p/1914825)
 
 # Wallpapers
 
