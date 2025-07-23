@@ -46,19 +46,48 @@ window#waybar {
 	color: #a6e3a1;
 	border-bottom: 5px solid #a6e3a1;
 }
+@keyframes blinking {
+    to {
+        color: #89b4fa;
+        border-bottom: 5px solid #89b4fa;
+    }
+}
 #battery {
 	color: #89b4fa;
 	border-bottom: 5px solid #89b4fa;
 }
+
+#battery.warning:not(.charging) {
+	color: #f9e2af;
+	border-bottom: 5px solid #f9e2af;
+
+    animation-name: blinking;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(12);
+}
+
+#battery.critical:not(.charging) {
+	color: #f38ba8;
+	border-bottom: 5px solid #f38ba8;
+
+    animation-name: blinking;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(12);
+}
+
 #pulseaudio {
 	color: #f9e2af;
 	border-bottom: 5px solid #f9e2af;
 }
+
 #network {
 	color: #fab387;
 	border-bottom: 5px solid #fab387;
 
 }
+
 #custom-separator {
 	color: #b4befe;
 	font-size: 20px;

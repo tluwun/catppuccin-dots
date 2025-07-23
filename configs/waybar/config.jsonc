@@ -9,8 +9,8 @@
 		"cpu", 
 		"custom/separator", 
 		"memory",
-        "custom/separator"//,
-        //"custom/weather" 
+        "custom/separator",
+        "custom/weather" 
 	],
 
 	"modules-center": [ "clock" ],
@@ -53,7 +53,12 @@
 	},
 	"battery": {
 		"format": "{capacity}% {icon}",
-		"format-plugged": "{capacity}% {icon}",
+		"format-charging": "{capacity}% {icon}",
+        "states": {
+            "warning": 20,
+            "critical": 10
+        },
+        "format-plugged": "",
 		"format-icons": [ "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹" ]
 	},
 	"pulseaudio": {
