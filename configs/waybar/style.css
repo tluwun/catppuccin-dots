@@ -78,8 +78,8 @@ window#waybar {
 }
 
 #battery.charging {
-    color: #f9e2af;
-    border-bottom: 5px solid #f9e2af;
+    color: #a6e3a1;
+    border-bottom: 5px solid #a6e3a1
 }
 
 #pulseaudio {
