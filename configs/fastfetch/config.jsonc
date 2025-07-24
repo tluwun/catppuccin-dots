@@ -1,5 +1,6 @@
 {
   "$schema": "~/.config/fastfetch/schema.jsonc",
+  "logo": "$HOME/.config/fastfetch/logo",
   "modules": [
     "title",
     "separator",
