@@ -47,3 +47,6 @@ user_pref("dom.ipc.plugins.flash.subprocess.crashreporter.enabled", false);
 // Enable support i2pd
 user_pref("media.peerconnection.ice.proxy_only", true);
 user_pref("keyword.enabled", false);
+
+// Enable webrender support
+user_pref("gfx.webrender.all", true);
