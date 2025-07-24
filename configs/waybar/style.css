@@ -77,6 +77,11 @@ window#waybar {
     animation-timing-function: steps(12);
 }
 
+#battery.charging {
+    color: #f9e2af;
+    border-bottom: 5px solid #f9e2af;
+}
+
 #pulseaudio {
 	color: #f9e2af;
 	border-bottom: 5px solid #f9e2af;
