@@ -14,6 +14,9 @@ This is my catppuccin dots that i create on void linux.
 - **TERMINAL** <- alacritty
 - **Wallpaper tool** <- swww
 - **File Manager** <- Nemo
+- **Shell** <- fish
+- **Notification Daemon** <- dunst
+
 # Themes 
 - **Font Theme** <- JetBrainsMono Nerd Font
 - **Gtk Theme** <- [Catppuccin-Mocha-Standard-Blue-Dark](https://www.pling.com/p/1996672)
