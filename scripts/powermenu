@@ -1,6 +1,6 @@
 #!/bin/sh
 
-FORMAT=$(echo " Poweroff\n Reboot\n󰋊 Hibernate\n󰒲 Sleep\n Lock session\n󰍃 Logout" | fuzzel --dmenu --anchor top-right --width 15 --lines 9 | awk '{print tolower($2)}')
+FORMAT=$(echo " Poweroff\n Reboot\n󰋊 Hibernate\n󰒲 Sleep\n Lock session\n󰍃 Logout" | fuzzel --dmenu --anchor top-right --width 15 --lines 9 --placeholder "" | awk '{print tolower($2)}')
 
 
 case $FORMAT in
