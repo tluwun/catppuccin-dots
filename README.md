@@ -16,6 +16,9 @@ This is my catppuccin dots that i create on void linux.
 - **File Manager** <- Nemo
 - **Shell** <- fish
 - **Notification Daemon** <- dunst
+- **Screenshots** <- grim + slurp
+- **Font** <- JetBrainsMono Nerd Font
+- **Bar** <- waybar
 
 # Themes 
 - **Font Theme** <- JetBrainsMono Nerd Font
