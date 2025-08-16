@@ -57,7 +57,7 @@ All these wallpapers i take from https://github.com/orangci/walls-catppuccin-moc
 
 1. Install a necessary packages
 ```bash
-# xbps-install vim hyprland hyprlock hypridle cmus xdg-utils xdg-user-dirs cava cmatrix fish-shell Waybar fastfetch alacritty btop fuzzel qt5ct qt6ct starship git gsettings-desktop-schemas curl grim slurp wl-clipboard cliphist
+# xbps-install -S wayland mesa-dri elogind dbus vim hyprland hyprlock hypridle cmus xdg-utils xdg-user-dirs cava cmatrix fish-shell Waybar fastfetch alacritty btop fuzzel qt5ct qt6ct starship git gsettings-desktop-schemas curl grim slurp wl-clipboard cliphist xdg-desktop-portal-hyprland firefox nerd-fonts noto-fonts-emoji nemo pipewire wireplumber alsa-pipewire telegram-desktop qbittorrent mpv imv zathura zathura-pdf-mupdf bluetuith bluez libspa-bluetooth xorg-server-xwayland keepassxc
 ```
 2. Clone the repository
 ```bash
